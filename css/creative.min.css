@@ -20,8 +20,9 @@ body, html {
 }
 
 body {
-    font-family: 'PT Sans Caption', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     webkit-tap-highlight-color: #222
+    -webkit-font-smoothing: antialiased;
 }
 
 hr {
