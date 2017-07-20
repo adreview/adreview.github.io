@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,8 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]--></head>
+    <![endif]-->
+</head>
 <body id="page-top">
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display -->
@@ -57,12 +58,16 @@
                     AdReview - сервис, который позволяет рекламному агентству упростить и ускорить свою работу.<br>
                     <br>
                     Это достигается за счет:<br>
-                    <ul>
-                        <li>онлайн отчетности по количеству и стоимости работ</li>
-                        <li>автоматической конвертации баннеров из общего стандартного формата под форматы различных баннерных систем</li>
-                        <li>наличия настраиваемого калькулятора расчета стоимости работ</li>
-                        <li>ускорения и улучшения качества работы с заказчиком посредствам отправки ссылки на предварительные результаты, минуя потери данных в email и пр.</li>
-                    </ul>
+                <ul>
+                    <li>онлайн отчетности по количеству и стоимости работ</li>
+                    <li>автоматической конвертации баннеров из общего стандартного формата под форматы различных
+                        баннерных систем
+                    </li>
+                    <li>наличия настраиваемого калькулятора расчета стоимости работ</li>
+                    <li>ускорения и улучшения качества работы с заказчиком посредствам отправки ссылки на
+                        предварительные результаты, минуя потери данных в email и пр.
+                    </li>
+                </ul>
                 </p>
                 <div class="text-center">
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Начать!</a>
@@ -89,12 +94,14 @@
             <div class="col-lg-6 col-md-6 text-center">
                 <div class="service-box"><i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                     <h3>Онлайн отчеты</h3>
-                    <p class="text-muted">Удобные дашборды по клиенту, менеджеру и исполнителю с контролем доступа к данным</p></div>
+                    <p class="text-muted">Удобные дашборды по клиенту, менеджеру и исполнителю с контролем доступа к
+                        данным</p></div>
             </div>
             <div class="col-lg-6 col-md-6 text-center">
                 <div class="service-box"><i class="fa fa-4x fa-briefcase text-primary sr-icons"></i>
                     <h3>Конфигурации типов работ</h3>
-                    <p class="text-muted">Вы как админимтратор можете настраивать стоимто ваших типов работу и использовать это в онлайн калькуляторе и при рассчетах фин. результатов</p></div>
+                    <p class="text-muted">Вы как админимтратор можете настраивать стоимто ваших типов работу и
+                        использовать это в онлайн калькуляторе и при рассчетах фин. результатов</p></div>
             </div>
             <div class="col-lg-6 col-md-6 text-center">
                 <div class="service-box"><i class="fa fa-4x fa-support text-primary sr-icons"></i>
@@ -125,9 +132,39 @@
             <div class="col-lg-4 col-lg-offset-4 text-center">
                 <i class="fa fa-envelope-o fa-3x sr-contact"></i>
                 <p><a href="mailto:info@adreview.pro">info@adreview.pro</a></p>
-
-                <p>Артур Геращенко</p>
             </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-6 col-lg-offset-3 ">
+                <h4 class="text-center">Отправить заявку на подключение</h4>
+                <form action="https://formspree.io/info@adreview.pro"
+                      method="POST">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="_replyto" placeholder="Ваш email" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea name="message" placeholder="Укажите что-бы вы хотели узнать или приобрести"
+                                  class="form-control"></textarea>
+                    </div>
+
+                    <div>
+
+                        <label class="">
+                            <input type="checkbox" ng-model="applyPolicy">
+                            На условиях и для целей, определенных <a href="/privacy.html" target="_blank"><u>Политикой конфиденциальности</u></a> принимаю даю своё согласие AdReview на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных». </label>
+                    </div>
+
+                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit" ng-disabled="!applyPolicy">
+                        <strong>Отправить</strong>
+                    </button>
+                </form>
+            </div>
+            <div class="clearfix"></div>
+
+            <br><br><br>
+            <p class="text-muted text-right" style="font-size: 12px;">Артур Геращенко. 2016 г.</p>
         </div>
     </div>
 </section><!-- jQuery -->
@@ -138,6 +175,7 @@
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script><!-- Theme JavaScript -->
 <script src="js/creative.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 </body>
 </html>
