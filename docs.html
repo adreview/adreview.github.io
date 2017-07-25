@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="adreview платформа для рекламных материалов корпоративного уровня">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"><!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"><!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Документация и Тех. требования</title>
+</head>
+<body id="page-top">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid"><!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Переключить навигацию</span> Меню
+                <i class="fa fa-bars"></i></button>
+            <a class="navbar-brand page-scroll" href="/#page-top"><img src="img/avatar.png"
+                                                                      height="30"> AdReview</a></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="page-scroll" href="/#about">О продукте</a></li>
+                <li><a class="page-scroll" href="/#services">Возможности</a></li>
+                <li><a class="page-scroll" href="/docs.html">Документация</a></li>
+                <li><a class="page-scroll" href="/#contact">Контакты</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse --></div><!-- /.container-fluid --></nav>
+<section  id="docs">
+<div class="container">
+    <h2>Описание</h2>
+    <p><b>AdReview</b> - сервис, который позволяет рекламному агентству упростить и ускорить свою работу. Это
+        достигается за
+        счет:</p>
+    <ul>
+        <li>онлайн отчетности по количеству и стоимости работ</li>
+        <li>автоматической конвертации баннеров из общего стандартного формата под форматы различных баннерных систем
+        </li>
+        <li>наличия настраиваемого калькулятора расчета стоимости работ</li>
+        <li>ускорения и улучшения качества работы с заказчиком посредствам отправки ссылки на предварительные
+            результаты, минуя потери данных в email и пр.
+        </li>
+    </ul>
+
+    <h2>Отчеты</h2>
+    <p>Система содержит три встроенных разреза отчетов по работам:</p>
+    <ol>
+        <li>По клиенту</li>
+        <li>По менеджеру</li>
+        <li>По исполнителю</li>
+    </ol>
+    <p>На этих страницах вы можете посмотреть данные по работам в разных разрезах. Доступность отчетов зависит от прав
+        авторизованного пользователя:</p>
+    <ol>
+        <li>Менеджер видит только свои задачи и их фин. результат</li>
+        <li>Руководитель видит все задачи своих подчиненных</li>
+        <li>Исполнитель не видит фин. результатов и может только заливать баннеры и отмечать работы</li>
+    </ol>
+
+    <h3>По клиентам</h3>
+    <p><img src="files/docs/reports_by_client.png" alt="отчеты по клиентам" style="max-height: 700px;"/></p>
+
+    <h3>По менеджерам</h3>
+    <p><img src="files/docs/reports_by_manager.png" alt="отчеты по менеджерам" style="max-height: 700px;"/></p>
+
+    <h3>По исполнителям</h3>
+    <p><img src="files/docs/reports_by_assignee.png" alt="отчеты по исполнителям" style="max-height: 700px;"/></p>
+
+    <h2>Работы</h2>
+
+    <p>Со страниц отчетов по клиентам, менеджерам и сотрудникам вы можете перейти в детальное описание задачи.</p>
+    <p><b>Задача</b> - работа для клиента. Создается по запросу клиента и может продолжаться более одного месяца. У клиента может быть много задач. Как правило для одного комплекта баннера и его ресайзов ставится одна задача. После полного выполнения задача закрывается и не переоткрывается.</p>
+    <p><b>Превью</b> - работы в рамках Задачи. Т.е. сперва на изготовление баннера, потом на правки, потом на ресайзы, их правки, при этом на каждый такой тип работ делается отдельное Превью.</p>
+
+    <h3>Как завести задачу</h3>
+    <ol>
+        <li>Задача заводится в вашей CRM, например JIRA, автоматически подхватывается связывается в adreview с клиентом и начинает отображаться в списках.</li>
+        <li>Далее исполнитель выполняет задачу, создает “Превью 1” (подзадача в рамках общей задачи) и отмечает вид и кол-во выполненных работ (в штуках или часах).</li>
+        <li>Исполнитель также может указать бесплатные правки или правки по времени в рамках текущего Превью. Все это потом будет учитываться в итоговых показателях.</li>
+        <li>В каждом превью есть специальная публичная ссылка для клиента (со сложным url, который не подобрать вручную) на предпросмотр рекламных материалов. Эту ссылку посылают клиенту для обсуждений.</li>
+    </ol>
+
+    <p>В рамках Превью вы также можете скачать все материалы по клику на псевдоссылку “скачать все”.</p>
+    <p>По итогу в каждой Задаче может быть несколько Превью, по каждому из которых будут свои комментарии, список работ и их стоимость для клиента. Также доступны итоговые показатели по задаче в целом.</p>
+    <p>В верхнем меню доступны кнопки выгрузки рекламных материалов под разные внешние системы. Все баннеры исходной стандартной формы могут быть сконвертированы под любую из представленных баннерных систем.</p>
+
+    <p><img src="files/docs/convertorts_panel.png" alt="панель конверторов" style="max-height: 160px;"/></p>
+
+    <h3>Нюансы</h3>
+    <ol>
+        <li>Тип работы “Создание баннера” и “Создание по раскадровке” могут быть использованы в задаче только один раз.</li>
+        <li>Система автоматически трактует типы работ “Ресайзы” как “Схожие ресайзы”, если форматы близки к друг другу. И считает их одинаковыми если форматы идентичны.</li>
+    </ol>
+
+    <h3>Скриншоты интерфейса задачи</h3>
+    <p><img src="files/docs/issue1.png" style="max-height: 700px;"/></p>
+    <p><img src="files/docs/issue2.png" style="max-height: 700px;"/></p>
+
+    <h2>Административный интерфейс</h2>
+    <p>Интерфейс администратора предполагает редактирование справочников типов и стоимостей работ, а также список конверторов рекламных площадок и их правила.</p>
+
+    <h3>Справочник типов работ</h3>
+    <p><img src="files/docs/admin_work_type.png" style="max-height: 700px;"/></p>
+    <p>Редактор предполагает редактирование стоимостей для онлайн-калькулятора и Превью для клиента. Есть три основных типа работ: работы поштучно, по времени и пакеты работ.</p>
+
+    <h3>Справочник рекламных площадок</h3>
+    <p>Позволяет настраивать правила валидации рекламных материалов для данной площадки. Сейчас валидируется:</p>
+    <ul>
+        <li>Вес файлов</li>
+        <li>Размер (ШхВ) баннера</li>
+    </ul>
+    <p>Можно добавить один и тот же конвертер как обработчик для разных площадок.</p>
+    <p><img src="files/docs/admin_areas.png" style="max-height: 700px;"/></p>
+
+    <h2>Онлайн калькулятор</h2>
+    <p><b>Поля</b></p>
+    <ul>
+       <li>“Прислал клиент”. Используется, если клиент прислал готовый баннер и нужно сделать на него ресайзы</li>
+       <li>“Нужные форматы”. Указываем те размеры которые нужно изготовить, каждый размер на новой строке. Разделитель в размерах не имеет значения.</li>
+       <li>“ТГБ”. Настройка как в “Нужные форматы”</li>
+       <li>Ниже выбор пакетов под баннерные системы. Который используется как справочник пресетов для форматов.</li>
+       <li>Ниже кнопки для выбора типа работ.</li>
+    </ul>
+    <p><b>Кнопки</b></p>
+    <ul>
+        <li>“Создание баннера”. Рассчитывает первый формат как “Создание баннера”, остальные как ресайзы</li>
+        <li>“Создание баннера по раскадровке”. Рассчитывает первый формат как “Создание баннера по раскадровке”, остальные как ресайзы</li>
+        <li>“Ресайзы”. Автоматически определяет разные и схожие ресайзы для правильного расчета цены</li>
+    </ul>
+    <p><img src="files/docs/online_calc.png" style="max-height: 700px;"/></p>
+</div>
+
+<br>
+<br class="dashed_br">
+<br>
+
+<div class="container">
+    <h1>Тех требования</h1>
+    <p>Требования баннерных систем</p>
+
+    <div>
+        <h3>Яндекс (Яндекс)</h3>
+        <div>Поддерживает: <b>HTML5</b></div>
+        <div><a href="https://www.yandex.ru/adv/requirements/html5">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Аукцион на мобильных версиях Яндекса и РСЯ</h3>
+        <div>Поддерживает: <b>JPG, PNG или GIF (значит, можно использовать анимацию). Максимальный вес — 120 Кб.</b>
+        </div>
+        <div><a href="https://advertising.yandex.ru/requirement/media/auction_mobileweb.xml?ncrnd=1188">документация</a>
+        </div>
+
+        <p>
+            1х - 320×50, 320×100, 240×400, 400×240, 728×90<br>
+            2х - 640×100, 640×200, 1456×180, 480×800, 800×480 (картинка в 2 раза больше 1х)
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Яндекс РСЯ</h3>
+        <div>Поддерживает: <b>JPG, PNG или GIF (значит, можно использовать анимацию). Максимальный вес — 120 Кб.
+        </b></div>
+        <div><a href="https://yandex.ru/support/direct/features/image-ads.xml">документация</a></div>
+        <p>
+            Графические объявления JPG, PNG или GIF:<br>
+            240×400, 300×250, 300×500, 300×600, 336×280, 640×100, 640×200, 640×960, 728×90, 960×640, 970×250.<br><br>
+            для мобильных версий JPG, PNG или GIF:<br>
+            1х - 320×50, 320×100, 240×400, 400×240, 728×90<br><br>
+            2х - 640×100, 640×200, 1456×180, 480×800, 800×480 (картинка в 2 раза больше 1х)
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Аuditorius (Аuditorius)</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://wiki.auditorius.ru/pages/viewpage.action?pageId=3899481">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Google Adwords (Google)</h3>
+        <div>Поддерживает: <b>HTML5</b></div>
+        <div><a href="https://support.google.com/adwordspolicy/answer/176108?hl=ru">документация: требования</a>, <a
+                href="https://support.google.com/adwords/answer/1722096#HTML5">документация: объявления HTML5</a></div>
+        <p>
+            архив не более 150кб при конвертации добавляться + 45кб
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Google DBM (Google)</h3>
+        <div>Поддерживает: <b>HTML5, GIF, SWF</b></div>
+        <div><a href="https://support.google.com/dcm/partner/answer/3145300?hl=ru">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Adriver (Adriver)</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://www.adriver.ru/doc/ban/spec/spec_576.html">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Mail.ru</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://sales.mail.ru/ru/russia/main/latest/technical/#a75">документация</a></div>
+        <p>
+            Макс. размер: 150 Кб;
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>myTarget (mail.ru)</h3>
+        <div>Поддерживает: <b>HTML5, GIF и многое другое</b></div>
+        <div><a href="https://target.my.com/adv/help/adverts">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Adfox</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://specs.adfox.ru/page/233/">документация 1</a>, <a href="http://specs.adfox.ru/page/235/">документация
+            2</a></div>
+        <p>
+            XXXXXXX
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Sociomantic (Sociomantic)</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="/files/sociomantic/sotiomatic.docx">документация 1</a>, <a href="/files/sociomantic/tech.pdf">документация
+            2</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>rbc.ru (rbc.ru)</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://adv.rbc.ru/requirements/">документация</a></div>
+        <p>
+            Макс: 150 Кб
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>pdg</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="http://www.pdg.ru/ban/">документация</a></div>
+        <p>
+            Макс: 299 Кб
+        </p>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>targetix (targetix)</h3>
+        <div>Поддерживает: <b>HTML5, GIF</b></div>
+        <div><a href="files/targetix/targetix.pdf">документация</a></div>
+    </div>
+    <br class="dashed_br">
+
+    <div>
+        <h3>Segmento (Segmento)</h3>
+        <div>Поддерживает: <b>HTML5</b></div>
+        <div><a href="https://www.segmento.ru/creative_requirements_ru">документация</a>, <a
+                href="files/segmento/segmento.docx">инструкция</a></div>
+        <p>
+            пакет форматов для Google + Яндекс + 240x400 mail
+        </p>
+    </div>
+</div>
+</section>
+</body>
+</html>
