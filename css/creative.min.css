@@ -594,3 +594,9 @@ img::-moz-selection {
 .pricing .item .feature-list li.disabled .fa {
     color: #999;
 }
+
+.faq-q {
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 15px;
+}
